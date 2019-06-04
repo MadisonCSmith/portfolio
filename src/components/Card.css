@@ -1,0 +1,13 @@
+.card{
+    text-align: left;
+    font-size: 80%;
+    position: relative;
+}
+
+.card-title {
+    margin-left: 5%;
+}
+
+.card-container {
+    position: relative;
+}

@@ -1,0 +1,10 @@
+#guide-timeline {
+    font-size: 95%;
+    font-weight: 400;
+    color: gray;
+    text-align: right;
+}
+
+.narrative {
+    position: relative;
+}

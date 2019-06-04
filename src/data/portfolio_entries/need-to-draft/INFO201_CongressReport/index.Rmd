@@ -1,0 +1,236 @@
+---
+title: "Legislative Data"
+author: "Madison Smith"
+date: "2/9/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library("httr")
+library("jsonlite")
+source('apikeys.R') 
+source('RWork.R')
+library('knitr')
+```
+## Introduction
+This report contains three sections. The first section contains information
+about recent bills and votes in both the House of Representatives and the
+Senate. All the information in this first section is from the current
+Congress (the 115th Congress). The second section contains information
+about recent bills around the topic of immigration, specifically a bill
+called the PROSPER Act and bills related to the PROSPER Act. The last
+section is about Patty Murray, a Washington State senator, and the positions
+she has taken recently. This section also compares her actions to those of
+the majority of the Democractic party. The data used in the report was
+collected from the ProPublica API. 
+
+## Recent Bills and Votes  
+  
+These are the five most recent bills enacted by either the House of
+Representatives or Senate in the current (115th) United States Congress.
+
+This is what each of the columns mean: 
+  
+- **bill_id**: The bill_id is a set of characters that is unique to each
+bill. The 's' or 'hr' in each key stands for 'Senate' or 'House of
+Representatives'. The digits that follow those characters are is the number
+of the bill. Bill numbers 1000-4999 are from the House of Represenatives
+and anything 5000 or higher is a bill from the Senate. The number '115'
+stands for our current 115th Congress.   
+- **short_title**: The is the title of the bill used to understand what
+the bill is about.  
+- **sponsor_name**: This is the sponsor of the bill. The sponsor is the
+member of Congress who introduces the bill. Usually the bill is particularly
+important to them and the people they represent. This person tries to
+get support for that bill so the bill can become a law.  
+- **sponsor_state**: This is the state that the sponsor has been elected
+to represent. This shows where the people are who want/need this bill
+likely live.  
+- **sponsor_party**: This is the party that the sponsor is a part of.
+This shows some of the values of the people who created and support the bill.    
+- **enacted**: Since all of these bills were bills that were made into
+a law, the current status for all of these bills is enacted.  
+- **congressdotgov_url**: This is the web address where you can find more
+information about the bill. This web address will take you to Congress.gov,
+a website run by the Library of Congress.   
+  
+
+```{r echo=FALSE}
+kable(five.recent.bill) 
+```
+   
+These are the five most recent votes in both the House of Representatives
+and Senate in the 115th United States Congress.
+  
+This is what each column means:  
+  
+- **bill_id**: The bill_id is a set of characters that is unique to each
+bill. The 's' or 'hr' in each key stands for 'Senate' or 'House of
+Representatives'. The digits that follow those characters are is the number
+of the bill. Bill numbers 1000-4999 are from the House of Represenatives
+and anything 5000 or higher is a bill from the Senate. The number '115'
+stands for our current 115th Congress.  
+- **description**: The is a very short description that tell you a bit more
+about the vote, like if it was about a bill, an act, or an amendment.
+- **vote_type**: 
+    - **YEA-AND-NAY:** A yea-and-nay vote is used in the House of
+    Representatives. A yea-and-nay vote is used when a measure is expected
+    to have little opposition. This is when members of the house vote yea
+    or nay vocally all at once. Occasionally, the chair of the requests
+    for unanimous support of the bill unless someone voices opposition.
+    - **RECORDED VOTE:** A recorded vote is used in the House of
+    Representatives. Also known as a roll call vote, a recorded vote must
+    be done when requested by one-fifth of the members or when chosen by
+    the Speaker of the House. Most of the time, in order to pass the measure
+    and just half the members need to vote 'yea.' However, in some
+    circumstances, two-thirds of the members need to vote 'yea'.
+    - **1/2:** A 1/2 vote is used in the Senate. Also known as a simple
+    majority, this is when more than half of the senate (51 votes) must
+    vote for a measure to pass. Most measures only need a simple a majority
+    to pass. 
+    - **3/5:** A 3/5 vote is used in the Senate. Also known as a
+    supermajority, this is when sixty percent (67 votes) of the senate must 
+    vote for a measure to pass. Supermajorities are only needed in special
+    circumstances, including expelling members, impeaching federal
+    officials, and overriding a presidential veto.  
+- **result:** This says if the measure was passed/agreed to or not. This
+tells you whether or not the members of the House or Senate got the votes
+needed to pass the measure. Representatives vote for measures in the House
+of Representatives. Senators vote for measure in the Senate. A cloture
+is a measure used to limit discussion and are used to end filibusters.  
+- **url:** This is the web address where you can find more information 
+about the bill. This web address will take you to Congress.gov, a website
+run by the Library of Congress.  
+  
+  
+```{r echo=FALSE}
+kable(five.recent.vote, row.names = NA, col.names = NA)
+```
+ 
+References at bottom of page.
+   
+## Bills Relating to Immigration
+  
+This section explores bills that are related to immigration. I searched the
+ProPublic Congress API for the term 'immigration.' Then I took the data I
+got back, and converted it into a table.   
+  
+These are the three most recent bills relating to immigration from both the
+House of Representatives and Senate.
+  
+```{r echo=FALSE}
+kable(immigration.data, row.names = NA, col.names = NA)
+```
+  
+A bill above about the affordable secondary education was interesting to me
+so I explored it further. By getting the bill ID from the table above and
+using it to search for that specific bill I got a bunch of data about that
+bill. From the data, I picked out the data pointed I needed and put it into
+the following sentences using inline code. By doing this, I found out that
+this bill is also called the `r bill.title`. `r bill.sponsor` is sponsoring
+the bill and they are a `r sponsor.party` member of the House of
+Representatives from `r sponsor.state`. The bill was introduced on 
+`r introduced.data` and has `r num.cosponsors` cosponsors. The last major 
+action on the bill was `r last.action`. For more information and the full
+text of the bill [click here](education.url)
+  
+I researched further, but this time outside the ProPublica Congress API.
+From a congressional website, I learned that this bill is meant to help
+students complete their secondary education. The bill claims that it will
+help give people the skills they need for success. A committee recently
+voted that the bill be presented to the full chamber so that the bill can
+be considered further. Only 25% of bills get out of committee, so that means
+the bill is a good one. According to Skopos Lab, there is a 45% chance of
+the bill being passed. The bill is meant to replace an Obama-era law called
+the Higher Education Act and fix a supposedly broken secondary education
+system. The bills deals with free speech protections, access to religious
+groups on campus, as well as other rights that students have on campus.
+Members of Congress say that the bill will hugely reduce student aid,
+help transfer students graduate, and make on-campus sexual assault more
+likely. The media says that the bill will reduce protections for
+LGTBQ+ students. 
+
+These are three recent bills relating to the `r bill.title` from both
+ the House of Representatives and Senate in the 115th Congress of the
+ United States.  
+     
+   
+```{r echo=FALSE}
+kable(related.immigration.bill, row.names = NA, col.names = NA)
+```
+  
+References at bottom of page.
+
+## `r first.name` `r last.name`
+
+Twitter handle: `r twitter`  
+Youtube channel: `r youtube`  
+website: `r website`   
+phone number: `r phone`  
+  
+Here is a list of recent bills she sponsored or cosponsored.
+
+- `r all.bills[1, 1]`
+- `r all.bills[2, 1]`
+- `r all.bills[3, 1]`
+- `r all.bills[4, 1]`
+- `r all.bills[5, 1]`
+- `r all.bills[6, 1]`
+- `r all.bills[7, 1]`
+- `r all.bills[8, 1]`
+- `r all.bills[9, 1]`
+- `r all.bills[10, 1]`
+
+  
+In recent her votes, Patty Murray voted with the Democractic party 
+`r percent`% of the time.
+  
+
+## References
+"115th United States Congress." BALLOTPEDIA, 
+https://ballotpedia.org/115th_United_States_Congress. Accessed 10 Feb. 2018.  
+
+"Bill Number Assignments." , apps.leg.wa.gov/billinfo/billsearch.htm. 
+Accessed 11 Feb. 2018.  
+
+"Congressional Bills." govinfo, U.S. Government Publishing Office, 
+https://www.govinfo.gov/help/bills. Accessed 11 Feb. 2018.  
+
+"How a Bill Becomes Law." Congressman Frank Lewis, https://lucas.house.gov/legislative-work/how-bill-becomes-law. 
+Accessed 11 Feb. 2018.  
+
+"H.R. 4508: PROSPER Act." govtrack, Civic Impulse, LLC, https://www.govtrack.us/congress/bills/115/hr4508. 
+Accessed 11 Feb. 2018.  
+
+"H.R.4508 - PROSPER Act." Congress.gov, Library of Congress, https://www.congress.gov/bill/115th-congress/house-bill/4508. 
+Accessed 11 Feb. 2018.  
+
+Moreau, Julie. "Republican-backed education bill alarms LGBTQ advocates." ABC News, https://www.nbcnews.com/feature/nbc-out/
+republican-backed-education-bill-alarms-lgbtq-advocates-n845591. 
+Accessed 7 Feb. 2018.  
+
+ProPublica Datastore, https://projects.propublica.org/api-docs/congress-api/ 
+. Accessed 11 Feb. 2018. 
+"S.117 - Alex Diekmann Peak Designation Act of 2017." Congress.gov,
+Library of Congress, https://www.congress.gov/bill/115th-congress
+/senate-bill/117/text. Accessed 11 Feb. 2018.  
+
+"Statements about H.R.4508: PROSPER Act." ProPublica, Pro Publica Inc., https://projects.propublica.org/represent/bills/115/hr4508/statements. 
+Accessed 11 Feb. 2018. 
+
+"The Supermajority Vote in US Congress." ThoughtCo., https://www.thoughtco.com
+/the-supermajority-vote-in-us-government-3322045. Accessed 11 Feb. 2018.  
+
+"What Are the Types of Votes Accepted in Congress?." Classroom, classroom.synonym.com/types-votes-accepted-congress-9740.html. 
+Accessed 11 Feb. 2018.  
+
+"Yea or Nay? Voting in the Senate." United States Senate, https://www.senate.gov/general/Features/votes.htm. Accessed 11 Feb. 2018. 
+
+
+
+
+

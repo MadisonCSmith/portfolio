@@ -1,0 +1,101 @@
+#timeline-section {
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+
+#timeline {
+    width: 15px;
+    height: 2000px;
+    background-color: lightgray;
+    margin: 0 auto;
+    position: relative;
+}
+
+#timeline-container {
+    height: 2000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.bar {
+    width: 10px;
+    position: absolute;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.academic {
+    background-color: #24BDCF;
+    z-index: 0;
+}
+
+.recreation {
+    background-color: #F5BF00;
+    z-index: 2;
+    left: 10px;
+}
+
+.work {
+    background-color: #EF6E69;
+    z-index: 1;
+    right: 10px;
+}
+
+/* stuff for entry view */
+#entry-view{
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+#description {
+    padding-top: 5%;
+    font-size: 110%;
+}
+
+#reflection {
+    padding-top: 5%;
+    padding-bottom: 50px;
+    font-size: 110%;
+}
+
+#entry{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+h3 {
+  font-size: 150%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#close-img {
+  max-width:7%;
+  height:auto;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+#meta-info {
+  font-size: 120%;
+}
+
+
+
