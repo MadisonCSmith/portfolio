@@ -25,7 +25,7 @@
 
 
 .bar {
-    width: 10px;
+    width: 15px;
     position: absolute;
     margin: 0 auto;
     box-shadow: 2px 2px 2px lightgray;
@@ -35,19 +35,14 @@
 
 .academic {
     background-color: #24BDCF;
-    z-index: 0;
 }
 
 .recreation {
     background-color: #F5BF00;
-    z-index: 2;
-    left: 10px;
 }
 
 .work {
     background-color: #EF6E69;
-    z-index: 1;
-    right: 10px;
 }
 
 /* stuff for entry view */
@@ -97,5 +92,31 @@ h3 {
   font-size: 120%;
 }
 
+#example-circle-academic {
+    background-color: #24BDCF;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+}
+
+#example-circle-work {
+    background-color: #EF6E69;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+}
+
+#example-circle-extracurricular {
+    background-color: #F5BF00;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+}
+
+#drop-down{
+    position: relative;
+    right: 25%;
+    padding-top: 3%;
+}
 
 
