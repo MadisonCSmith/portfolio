@@ -8,6 +8,7 @@ import CTEPhoto from "../data/portfolio_entries/CTE/pic1.JPG";
 import GuestServicesPhoto from "../data/portfolio_entries/GuestServices/pic1.JPG";
 import PSEPhoto from "../data/portfolio_entries/PSE/pic1.JPG";
 import CaminoPhoto from "../data/portfolio_entries/ElCaminodeSantiago/pic1.JPG";
+import BIMEPhoto from "../data/portfolio_entries/BIME498_CountDiagnoses/pic1.JPG";
 import emptyPhoto from "../imgs/empty_photo.png";
 
 
@@ -38,6 +39,8 @@ export class ImgEntry extends Component {
                 imgSource = PSEPhoto;
         } else if (this.props.extension == "ElCaminodeSantiago"){
                 imgSource = CaminoPhoto;
+        } else if (this.props.extension == "BIME498_CountDiagnoses") {
+                imgSource = BIMEPhoto;
         } else {
                 imgSource = emptyPhoto;
         }

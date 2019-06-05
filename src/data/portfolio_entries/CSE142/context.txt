@@ -1,0 +1,1 @@
+This was one of the first programs I wrote in the introductory programming classes. This program compares two applicants and determines the best one in Java. 

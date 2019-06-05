@@ -9,6 +9,13 @@ import CTEPhoto from "../data/portfolio_entries/CTE/pic1.JPG";
 import GuestServicesPhoto from "../data/portfolio_entries/GuestServices/pic1.JPG";
 import PSEPhoto from "../data/portfolio_entries/PSE/pic1.JPG";
 import CaminoPhoto from "../data/portfolio_entries/ElCaminodeSantiago/pic1.JPG";
+import LearningTreePhoto from "../data/portfolio_entries/INFO200_FinalEssay/pic1.JPG";
+import Phil100 from "../data/portfolio_entries/Phil100_Essay/pic1.JPG";
+import WhatWeKnow from "../data/portfolio_entries/WhatWeKnow/pic1.JPG";
+import Chem152 from "../data/portfolio_entries/Chem152/pic1.JPG";
+import Cse142 from "../data/portfolio_entries/CSE142/pic1.JPG";
+import Phil114 from "../data/portfolio_entries/PHIL114_FinalPaper/pic1.JPG";
+import BIME from "../data/portfolio_entries/BIME498_CountDiagnoses/pic1.JPG";
 import emptyPhoto from "../imgs/empty_photo.png";
 
 
@@ -49,6 +56,20 @@ export class Card extends Component {
                   imgSource = PSEPhoto;
             } else if (this.props.extension == "ElCaminodeSantiago"){
                   imgSource = CaminoPhoto;
+            } else if (this.props.extension == "INFO200_FinalEssay") {
+                  imgSource = LearningTreePhoto;
+            } else if (this.props.extension == "Phil100_Essay") {
+                  imgSource = Phil100;
+            } else if (this.props.extension == "WhatWeKnow") {
+                  imgSource = WhatWeKnow;
+            } else if (this.props.extension == "Chem152") {
+                  imgSource = Chem152;
+            } else if (this.props.extension == "Cse142") {
+                  imgSource = Cse142;
+            } else if (this.props.extension == "Phil114_FinalPaper") {
+                  imgSource = Phil114;
+            } else if (this.props.extension == "BIME498_CountDiagnoses") {
+                  imgSource = BIME;
             } else {
                   imgSource = emptyPhoto;
             }

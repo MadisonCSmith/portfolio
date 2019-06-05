@@ -1,13 +1,20 @@
 {
     "data":[
-      {"title":"Who are you?", "classCompany":"Introduction to Honors", "startDate":"9/26/14", "endDate":"10/4/14", "extension":"Honors100_WhoAreYou", "type":"academic", "entryType":"pic"}, 
-      {"title":"Experiential Learning Interview", "classCompany":"Introduction to Honors", "startDate":"10/5/14", "endDate":"10/25/14", "extension":"Honors100_ExperientialLearningInterview", "type":"academic", "entryType":"pic"},
-      {"title":"Curriculum Planning", "classCompany":"Introduction to Honors", "startDate":"10/13/14", "endDate":"10/20/14", "extension":"Curriculum_Planning", "type":"academic", "entryType":"pic"},
-      {"title":"Swim Instructor and Lifeguard", "classCompany":"Bellingham Golf and Country Club", "startDate":"6/15/15", "endDate":"9/30/15", "extension":"BGCC", "type":"work", "entryType":"pic"},    
-      {"title":"Student Supervisor", "classCompany":"Academic Technologies", "startDate":"10/31/15", "endDate":"3/15/19", "extension":"CTE", "type":"work", "entryType":"pics"},      
-      {"title":"Paradise Inn Barista", "classCompany":"Guest Services", "startDate":"6/18/17", "endDate":"9/7/17", "extension":"GuestServices", "type":"work", "entryType":"pics"},      
-      {"title":"Performance Analytics Intern", "classCompany":"Puget Sound Energy", "startDate":"6/18/18", "endDate":"6/19/18", "extension":"PSE", "type":"work", "entryType":"pics"}, 
-      {"title":"El Camino de Santiago", "classCompany":"Spain", "startDate":"7/16/15", "endDate":"8/7/15", "extension":"ElCaminodeSantiago", "type":"recreation", "entryType":"pics"}
+      {"title":"Who are you?", "classCompany":"Introduction to Honors", "startDate":"9/26/14", "endDate":"10/4/14", "extension":"Honors100_WhoAreYou", "type":"academic", "entryType":"pic", "url":null}, 
+      {"title":"Experiential Learning Interview", "classCompany":"Introduction to Honors", "startDate":"10/5/14", "endDate":"10/25/14", "extension":"Honors100_ExperientialLearningInterview", "type":"academic", "entryType":"pic", "url":null},
+      {"title":"Curriculum Planning", "classCompany":"Introduction to Honors", "startDate":"10/13/14", "endDate":"10/20/14", "extension":"Curriculum_Planning", "type":"academic", "entryType":"pic", "url":null},
+      {"title":"Swim Instructor and Lifeguard", "classCompany":"Bellingham Golf and Country Club", "startDate":"6/15/15", "endDate":"9/30/15", "extension":"BGCC", "type":"work", "entryType":"pic", "url":null},    
+      {"title":"Student Supervisor", "classCompany":"Academic Technologies", "startDate":"10/31/15", "endDate":"3/15/19", "extension":"CTE", "type":"work", "entryType":"pics", "url":null},      
+      {"title":"Paradise Inn Barista", "classCompany":"Guest Services", "startDate":"6/18/17", "endDate":"9/7/17", "extension":"GuestServices", "type":"work", "entryType":"pics", "url":null},      
+      {"title":"Performance Analytics Intern", "classCompany":"Puget Sound Energy", "startDate":"6/18/18", "endDate":"6/19/18", "extension":"PSE", "type":"work", "entryType":"pics", "url":null}, 
+      {"title":"El Camino de Santiago", "classCompany":"Spain", "startDate":"7/16/15", "endDate":"8/7/15", "extension":"ElCaminodeSantiago", "type":"recreation", "entryType":"pics", "url":null},
+      {"title":"The Learning Tree", "classCompany":"Intellectual Foundations", "startDate":"1/1/16", "endDate":"2/1/16", "extension":"INFO200_FinalEssay", "type":"academic", "entryType":"website", "url":"https://kaykim95.wixsite.com/thelearningtree"},
+      {"title":"Physicalism, Idealism, and Dualism", "classCompany":"Intro to Philosophy", "startDate":"2/1/16", "endDate":"3/1/16", "extension":"Phil100_Essay", "type":"academic", "entryType":"pics", "url":null},
+      {"title":"The Fictional and Historical Madame De Pompadour", "classCompany":"What We Know and How We Know It", "startDate":"10/1/14", "endDate":"12/1/14", "extension":"WhatWeKnow", "type":"academic", "entryType":"pics", "url":null},
+      {"title":"Weak Acid Titrations", "classCompany":"Intro to Chemistry II", "startDate":"1/1/15", "endDate":"3/1/15", "extension":"Chem152", "type":"academic", "entryType":"pics", "url":null},
+      {"title":"Admit Program", "classCompany":"Intro to Programming II", "startDate":"3/11/15", "endDate":"6/1/15", "extension":"Cse142", "type":"academic", "entryType":"pics", "url":null},
+      {"title":"Dred Scott", "classCompany":"Philosophical Topics in Law", "startDate":"1/11/18", "endDate":"1/21/18", "extension":"PHIL114_FinalPaper", "type":"academic", "entryType":"pics", "url":null},
+      {"title":"Count Diagnosis", "classCompany":"Special Topics in Biomedical and Health Informatics", "startDate":"4/11/18", "endDate":"4/21/18", "extension":"BIME498_CountDiagnoses", "type":"academic", "entryType":"pics", "url":null}
     ]
 }
 

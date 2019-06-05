@@ -36,6 +36,36 @@ import CaminoPhoto7 from "../data/portfolio_entries/ElCaminodeSantiago/pic7.JPG"
 import CaminoPhoto8 from "../data/portfolio_entries/ElCaminodeSantiago/pic8.JPG";
 import CaminoPhoto9 from "../data/portfolio_entries/ElCaminodeSantiago/pic9.JPG";
 import CaminoPhoto10 from "../data/portfolio_entries/ElCaminodeSantiago/pic10.JPG";
+import Phil1001 from "../data/portfolio_entries/Phil100_Essay/pic1.JPG";
+import Phil1002 from "../data/portfolio_entries/Phil100_Essay/pic2.JPG";
+import Phil1003 from "../data/portfolio_entries/Phil100_Essay/pic3.JPG";
+import Phil1004 from "../data/portfolio_entries/Phil100_Essay/pic4.JPG";
+import Phil1005 from "../data/portfolio_entries/Phil100_Essay/pic5.JPG";
+import WhatWeKnow1 from "../data/portfolio_entries/WhatWeKnow/pic1.JPG";
+import WhatWeKnow2 from "../data/portfolio_entries/WhatWeKnow/pic2.JPG";
+import WhatWeKnow3 from "../data/portfolio_entries/WhatWeKnow/pic3.JPG";
+import WhatWeKnow4 from "../data/portfolio_entries/WhatWeKnow/pic4.JPG";
+import WhatWeKnow5 from "../data/portfolio_entries/WhatWeKnow/pic5.JPG";
+import WhatWeKnow6 from "../data/portfolio_entries/WhatWeKnow/pic6.JPG";
+import WhatWeKnow7 from "../data/portfolio_entries/WhatWeKnow/pic7.JPG";
+import Chem1521 from "../data/portfolio_entries/Chem152/pic1.JPG";
+import Chem1522 from "../data/portfolio_entries/Chem152/pic2.JPG";
+import Chem1523 from "../data/portfolio_entries/Chem152/pic3.JPG";
+import Chem1524 from "../data/portfolio_entries/Chem152/pic4.JPG";
+import Cse1421 from "../data/portfolio_entries/CSE142/pic1.JPG";
+import Cse1422 from "../data/portfolio_entries/CSE142/pic2.JPG";
+import Cse1423 from "../data/portfolio_entries/CSE142/pic3.JPG";
+import Cse1424 from "../data/portfolio_entries/CSE142/pic4.JPG";
+import Phil1141 from "../data/portfolio_entries/PHIL114_FinalPaper/pic1.JPG";
+import Phil1142 from "../data/portfolio_entries/PHIL114_FinalPaper/pic2.JPG";
+import Phil1143 from "../data/portfolio_entries/PHIL114_FinalPaper/pic3.JPG";
+import Phil1144 from "../data/portfolio_entries/PHIL114_FinalPaper/pic4.JPG";
+import Phil1145 from "../data/portfolio_entries/PHIL114_FinalPaper/pic5.JPG";
+import Phil1146 from "../data/portfolio_entries/PHIL114_FinalPaper/pic6.JPG";
+import Phil1147 from "../data/portfolio_entries/PHIL114_FinalPaper/pic7.JPG";
+import BIME1 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic1.JPG";
+import BIME2 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic2.JPG";
+import BIME3 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic3.JPG";
 import emptyPhoto from "../imgs/empty_photo.png";
 
 
@@ -59,6 +89,18 @@ export class ImgsEntry extends Component {
             pics = [PSEPhoto1, PSEPhoto2, PSEPhoto3, PSEPhoto4, PSEPhoto5, PSEPhoto6, PSEPhoto7];
         } else if (this.props.extension == "ElCaminodeSantiago"){
             pics = [CaminoPhoto1, CaminoPhoto2, CaminoPhoto3, CaminoPhoto4, CaminoPhoto5, CaminoPhoto6, CaminoPhoto7, CaminoPhoto8, CaminoPhoto9, CaminoPhoto10];
+        } else if (this.props.extension == "Phil100_Essay") {
+            pics = [Phil1001, Phil1002, Phil1003, Phil1004, Phil1005];
+        } else if (this.props.extension == "WhatWeKnow") {
+            pics = [WhatWeKnow1, WhatWeKnow2, WhatWeKnow3, WhatWeKnow4, WhatWeKnow5, WhatWeKnow6, WhatWeKnow7];
+        } else if (this.props.extension == "Chem152") {
+            pics = [Chem1521, Chem1522, Chem1523, Chem1524];
+        } else if (this.props.extension == "Cse142"){
+            pics = [Cse1421, Cse1422, Cse1423, Cse1424];
+        } else if (this.props.extension == "PHIL114_FinalPaper") {
+            pics = [Phil1141, Phil1142, Phil1143, Phil1144, Phil1145, Phil1146, Phil1147];
+        } else if (this.props.extension == "BIME498_CountDiagnoses") {
+            pics = [BIME1, BIME2, BIME3];
         } else {
             pics = [emptyPhoto];
         }
