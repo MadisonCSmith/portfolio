@@ -119,4 +119,12 @@ h3 {
     padding-top: 3%;
 }
 
+#timeline-title{
+    font-size: 160%;
+    font-weight: 300;
+    padding-top: 3%;
+    position: relative;
+    right: 4%;
+}
+
 

@@ -87,9 +87,11 @@ export class TimelineSection extends Component {
 		}
 
 		let timeline;
+		let timelineTitle;
 		let bars;
 		if (this.state.timelineType == "academic" ) {
 			timeline = <GuideTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
+			timelineTitle = "Academic Timeline";
 			bars = 	<>
 				<div id="0" className="bar academic" style={{top:this.pixelsDiff(new Date(data[0]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[0]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
 				<div id="1" className="bar academic" style={{top:this.pixelsDiff(new Date(data[1]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[1]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
@@ -98,6 +100,7 @@ export class TimelineSection extends Component {
 				</>
 		} else if (this.state.timelineType == "work") {
 			timeline = entry = <WorkTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
+			timelineTitle = "Work Timeline";
 			bars = 	<>
 				<div id="4" className="bar work" style={{top:this.pixelsDiff(new Date(data[4]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[4]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
 				<div id="5" className="bar work" style={{top:this.pixelsDiff(new Date(data[5]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[5]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
@@ -105,6 +108,7 @@ export class TimelineSection extends Component {
 				</>
 		} else if (this.state.timelineType == "extracurricular") {
 			timeline = entry = <ExtracurricularTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
+			timelineTitle = "Extracurricular Timeline";
 			bars = 	<>
 			<div id="7" className="bar recreation" style={{top:this.pixelsDiff(new Date(data[7]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[7]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
 			</>
@@ -114,22 +118,24 @@ export class TimelineSection extends Component {
 		if (this.state.showEntry == false) {
 			return (
 				<div>
-
-					<div id="drop-down">
-						<Dropdown trigger={<Button />}>
-							<a id="academic" onClick={this.switchTimeline} href="#">
-								<div id="example-circle-academic"></div>
-								academic
-							</a>
-							<a id="work" onClick={this.switchTimeline} href="#">
-								<div id="example-circle-work"></div>
-								work
-							</a>
-							<a id="extracurricular" onClick={this.switchTimeline} href="#">
-								<div id="example-circle-extracurricular"></div>
-								extracurricular
-							</a>
-						</Dropdown>
+					<div className="row">
+						<div id="drop-down">
+							<Dropdown trigger={<Button waves="light" style={{marginRight: '5px', backgroundColor: "#005862"}}>Select timeline</Button>}>
+								<a id="academic" onClick={this.switchTimeline} href="#">
+									<div id="example-circle-academic"></div>
+									academic
+								</a>
+								<a id="work" onClick={this.switchTimeline} href="#">
+									<div id="example-circle-work"></div>
+									work
+								</a>
+								<a id="extracurricular" onClick={this.switchTimeline} href="#">
+									<div id="example-circle-extracurricular"></div>
+									extracurricular
+								</a>
+							</Dropdown>
+						</div>
+						<div id="timeline-title">{timelineTitle}</div>
 					</div>
 
 					<div className="row" id='timeline-section'>
