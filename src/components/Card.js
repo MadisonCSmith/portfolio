@@ -16,6 +16,7 @@ import Chem152 from "../data/portfolio_entries/Chem152/pic1.JPG";
 import Cse142 from "../data/portfolio_entries/CSE142/pic1.JPG";
 import Phil114 from "../data/portfolio_entries/PHIL114_FinalPaper/pic1.JPG";
 import BIME from "../data/portfolio_entries/BIME498_CountDiagnoses/pic1.JPG";
+import Olympics from "../data/portfolio_entries/HONORS220_Trip/pic1.JPG";
 import emptyPhoto from "../imgs/empty_photo.png";
 
 
@@ -70,6 +71,8 @@ export class Card extends Component {
                   imgSource = Phil114;
             } else if (this.props.extension == "BIME498_CountDiagnoses") {
                   imgSource = BIME;
+            } else if (this.props.extension == "HONORS220_Trip") {
+                  imgSource = Olympics;
             } else {
                   imgSource = emptyPhoto;
             }

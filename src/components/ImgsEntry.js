@@ -66,6 +66,16 @@ import Phil1147 from "../data/portfolio_entries/PHIL114_FinalPaper/pic7.JPG";
 import BIME1 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic1.JPG";
 import BIME2 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic2.JPG";
 import BIME3 from "../data/portfolio_entries/BIME498_CountDiagnoses/pic3.JPG";
+import Olympics1 from "../data/portfolio_entries/HONORS220_Trip/pic1.JPG";
+import Olympics2 from "../data/portfolio_entries/HONORS220_Trip/pic2.JPG";
+import Olympics3 from "../data/portfolio_entries/HONORS220_Trip/pic3.JPG";
+import Olympics4 from "../data/portfolio_entries/HONORS220_Trip/pic4.JPG";
+import Olympics5 from "../data/portfolio_entries/HONORS220_Trip/pic5.JPG";
+import Olympics6 from "../data/portfolio_entries/HONORS220_Trip/pic6.JPG";
+import Olympics7 from "../data/portfolio_entries/HONORS220_Trip/pic7.JPG";
+import Olympics8 from "../data/portfolio_entries/HONORS220_Trip/pic8.JPG";
+import Olympics9 from "../data/portfolio_entries/HONORS220_Trip/pic9.JPG";
+import Olympics10 from "../data/portfolio_entries/HONORS220_Trip/pic10.JPG";
 import emptyPhoto from "../imgs/empty_photo.png";
 
 
@@ -101,6 +111,8 @@ export class ImgsEntry extends Component {
             pics = [Phil1141, Phil1142, Phil1143, Phil1144, Phil1145, Phil1146, Phil1147];
         } else if (this.props.extension == "BIME498_CountDiagnoses") {
             pics = [BIME1, BIME2, BIME3];
+        } else if (this.props.extension == "HONORS220_Trip") {
+            pics = [Olympics1, Olympics2, Olympics3, Olympics4, Olympics5, Olympics6, Olympics7, Olympics8, Olympics9, Olympics10];
         } else {
             pics = [emptyPhoto];
         }

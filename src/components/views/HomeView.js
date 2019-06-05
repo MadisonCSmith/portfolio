@@ -21,7 +21,6 @@ export class HomeView extends Component {
 						<div id="links">
 							<a href="https://www.linkedin.com/in/madison-c-smith" target="_blank"><img className="links-icon" src={linkedInLogo} alt="linkedin icon"/></a>
 							<a href="https://github.com/MadisonCSmith" target="_blank"><img className="links-icon" src={githubLogo} alt="Github logo"/></a>
-							<a href="https://github.com/MadisonCSmith" target="_blank"><img className="links-icon" src={emailLogo} alt="email logo"/></a>
 						</div>
 					</div>
 					<PersonalStatement/>

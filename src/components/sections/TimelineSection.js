@@ -9,6 +9,7 @@ import {WebsiteEntry} from "../WebsiteEntry.js";
 import {Card} from "../Card.js";
 import { Dropdown } from 'react-materialize';
 import { Button } from 'react-materialize';
+import { Icon } from 'react-materialize';
 
 import {data} from "../../data/data.json";
 import {descriptions} from "../../data/descriptions.json";
@@ -92,25 +93,26 @@ export class TimelineSection extends Component {
 			timeline = <GuideTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
 			timelineTitle = "Academic Timeline";
 			bars = 	<>
-				<div id="0" className="bar academic" style={{top:this.pixelsDiff(new Date(data[0]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[0]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="1" className="bar academic" style={{top:this.pixelsDiff(new Date(data[1]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[1]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="2" className="bar academic" style={{top:this.pixelsDiff(new Date(data[2]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[2]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="8" className="bar academic" style={{top:this.pixelsDiff(new Date(data[8]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[8]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="9" className="bar academic" style={{top:this.pixelsDiff(new Date(data[9]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[9]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="10" className="bar academic" style={{top:this.pixelsDiff(new Date(data[10]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[10]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="11" className="bar academic" style={{top:this.pixelsDiff(new Date(data[11]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[11]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="12" className="bar academic" style={{top:this.pixelsDiff(new Date(data[12]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[12]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="13" className="bar academic" style={{top:this.pixelsDiff(new Date(data[13]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[13]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="14" className="bar academic" style={{top:this.pixelsDiff(new Date(data[14]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[14]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="0" className="bar academic" style={{top:this.pixelsDiff(new Date(data[0]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.005}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="1" className="bar academic" style={{top:this.pixelsDiff(new Date(data[1]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.005}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="2" className="bar academic" style={{top:this.pixelsDiff(new Date(data[2]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.005}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="8" className="bar academic" style={{top:this.pixelsDiff(new Date(data[8]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="9" className="bar academic" style={{top:this.pixelsDiff(new Date(data[9]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="10" className="bar academic" style={{top:this.pixelsDiff(new Date(data[10]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.04}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="11" className="bar academic" style={{top:this.pixelsDiff(new Date(data[11]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="12" className="bar academic" style={{top:this.pixelsDiff(new Date(data[12]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="13" className="bar academic" style={{top:this.pixelsDiff(new Date(data[13]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="14" className="bar academic" style={{top:this.pixelsDiff(new Date(data[14]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="15" className="bar academic" style={{top:this.pixelsDiff(new Date(data[15]['startDate']), this.state.firstDay), height: this.state.timelineLength * 0.05}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
 				</>
 		} else if (this.state.timelineType == "work") {
 			timeline = <WorkTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
 			timelineTitle = "Work Timeline";
 			bars = 	<>
-					<div id="3" className="bar work" style={{top:this.pixelsDiff(new Date(data[3]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[3]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="4" className="bar work" style={{top:this.pixelsDiff(new Date(data[4]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[4]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="5" className="bar work" style={{top:this.pixelsDiff(new Date(data[5]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[5]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
-				<div id="6" className="bar work" style={{top:this.pixelsDiff(new Date(data[6]['startDate']), this.state.firstDay), height:this.pixelsDiff(new Date(data[6]['startDate']), new Date(data[0]['endDate']))}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+					<div id="3" className="bar work" style={{top:this.pixelsDiff(new Date(data[3]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.06}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="4" className="bar work" style={{top:this.pixelsDiff(new Date(data[4]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.5}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="5" className="bar work" style={{top:this.pixelsDiff(new Date(data[5]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.06}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
+				<div id="6" className="bar work" style={{top:this.pixelsDiff(new Date(data[6]['startDate']), this.state.firstDay), height:this.state.timelineLength * 0.15}} onClick={this.showEntry} onMouseEnter={this.showCard} onMouseLeave={this.hideCard}></div>
 				</>
 		} else if (this.state.timelineType == "extracurricular") {
 			timeline = <ExtracurricularTimeline timelineLength={this.state.timelineLength} firstDay={this.state.firstDay} lastDay={this.state.lastDay}/>
@@ -158,8 +160,8 @@ export class TimelineSection extends Component {
 		} else {
 			return (
 				<div id='entry-view'>
-					<a className="btn-floating btn-large waves-effect waves-light black" onClick={this.hideEntry}><img src={closeImg} alt="back arrow"/></a>
-					<h1>{this.state.title}</h1>
+					<a className="btn-floating btn-large waves-effect waves-light black" onClick={this.hideEntry}>back</a>
+										<h1>{this.state.title}</h1>
 					<div id="meta-info">
 						<b>{this.state.classCompany}</b>
 						<br/>

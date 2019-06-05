@@ -20,8 +20,8 @@ export class WorkTimeline extends Component {
 		return (
             <div id="guide-timeline" className='col s3 offset-s1' style={{height:this.props.timelineLength}}>
                 <div className="narrative" style={{top:this.pixelsDiff(this.props.firstDay)}}>First day of college</div>
-                <div className="narrative" style={{top:this.pixelsDiff("2/25/15")}}>Took a job on campus with classroom technology</div>
-                <div className="narrative" style={{top:this.pixelsDiff("6/10/15")}}>Worked at a pool as a swim instructor and lifeguard over the summer</div>
+                <div className="narrative" style={{top:this.pixelsDiff("2015-06-10")}}>Worked at a pool as a swim instructor and lifeguard over the summer</div>
+                <div className="narrative" style={{top:this.pixelsDiff("2015-11-14")}}>Took a job on campus with classroom technology</div>
                 <div className="narrative" style={{top:this.pixelsDiff("6/18/17")}}>Worked as a barista in Mt. Rainier National Park over the summer</div>
                 <div className="narrative" style={{top:this.pixelsDiff("6/18/18")}}>Worked as a intern at Puget Sound Energy</div>
                 <div className="narrative" style={{top:this.pixelsDiff("12/1/18")}}>Graduation!</div>
