@@ -62,12 +62,18 @@
 #description {
     padding-top: 5%;
     font-size: 110%;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
 }
 
 #reflection {
     padding-top: 5%;
     padding-bottom: 50px;
     font-size: 110%;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
 }
 
 #entry{
