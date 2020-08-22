@@ -98,12 +98,83 @@ footer {
     margin-right: 5vw;
 }
 
-#project-section {
-    background-color: pink;
-    height: 100px;
-    width: 100px;
+#skills-pill {
+    height: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #0C63E7;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    border-radius: 3%;
     position: relative;
+    padding: 0% 3% 0% 3%;
+
 }
+
+#skills-pill:hover {
+    background-color: #07C8F9;
+    color: black;
+}
+
+#skills-pill:hover .cross {
+    display: inline;
+}
+
+#skills-pill .cross {
+    display: none;
+}
+
+.cross {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.card {
+    margin: 2%;
+    background-size: 100% auto;
+    background-repeat: no-repeat; 
+    color: #ffffff00;
+}
+
+.card.vertical {
+    height: 300px;
+    width: 200px;
+}
+
+.card.horizontal {
+    height: 200px;
+    width: 300px;
+}
+
+.card-overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.card-overlay:hover {
+    background-color: #07C8F9;
+    opacity: 60%;
+}
+
+.card:hover {
+    opacity: 80%;
+    color: black;
+}
+
+.card-text {
+    opacity: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 18px;
+}
+
+
+
 
 @media screen and (max-width: 600px) {
     

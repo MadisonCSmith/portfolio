@@ -1,78 +1,3 @@
-
-// // reads in helper.js
-// requirejs(["helper"], function(util) {
-//   //This function is called when scripts/helper/util.js is loaded.
-//   //If util.js calls define(), then this function is not fired until
-//   //util's dependencies have loaded, and the util argument will hold
-//   //the module value for "helper/util".
-// });
-
-// // Import the package main module
-// const csv = require('csv')
-// // Use the module
-// csv
-// // Generate 20 records
-// .generate({
-//   delimiter: '|',
-//   length: 20
-// })
-// // Parse the records
-// .pipe(csv.parse({
-//   delimiter: '|'
-// }))
-// // Transform each value into uppercase
-// .pipe(csv.transform(function(record){
-//    return record.map(function(value){
-//      return value.toUpperCase()
-//    });
-// }))
-// // Convert the object into a stream
-// .pipe(csv.stringify({
-//   quoted: true
-// }))
-// // Print the CSV stream to stdout
-// .pipe(process.stdout)
-
-// // console.log(csv)
-
-// console.log("testing")
-
-// var csv = require('../data/project_data.csv');
-
-// // var csv = require('csv');
-
-// var generator = csv.generate({seed: 1, columns: 2, length: 20});
-// var parser = csv.parse();
-// var transformer = csv.transform(function(data){
-//   return data.map(function(value){return value.toUpperCase()});
-// });
-// var stringifier = csv.stringify();
-
-// generator.on('readable', function(){
-//   while(data = generator.read()){
-//     parser.write(data);
-//   }
-// });
-
-// parser.on('readable', function(){
-//   while(data = parser.read()){
-//     transformer.write(data);
-//   }
-// });
-
-// transformer.on('readable', function(){
-//   while(data = transformer.read()){
-//     stringifier.write(data);
-//   }
-// });
-
-// stringifier.on('readable', function(){
-//   while(data = stringifier.read()){
-//     process.stdout.write(data);
-//   }
-// });
-
-
 var data;
 
 Papa.parse('../src/data/project_data.csv', {
@@ -82,6 +7,79 @@ Papa.parse('../src/data/project_data.csv', {
   complete: function(results) {
     console.log(results.data);
     data = results.data;
+    processData(data);
   }
 });
 
+var allSkills = []
+var currSkills = [];
+
+function processData(data) {
+
+  // gets all the skills from all the project entries
+  for (var i = 0; i < data.length; i++) {
+    currSkills = data[i].Skills.split(", ");
+    allSkills = allSkills.concat(currSkills);
+  }
+
+  // gets all unique skills
+  for (var i = 0; i < allSkills.length; i++) {
+    if (allSkills.slice(i + 1, allSkills.length).includes(allSkills[i])) {
+      allSkills.splice(i, 1);
+      i = i - 1;
+    }
+  }
+  currSkills = allSkills;
+  createSkillsFilters();
+  createProjectCards(data);
+}
+
+function createSkillsFilters() {
+
+  for (var i = 0; i < allSkills.length; i++) {
+
+    var pill = document.createElement("div");
+    pill.innerHTML= allSkills[i].toUpperCase()
+    var image = document.createElement("img")
+    image.src = "../src/imgs/cross.png";
+    image.className = "cross";
+    image.id = allSkills[i] + "-cross"
+    pill.append(image)
+    pill.id = "skills-pill";
+    document.getElementById("skills-filter").append(pill);
+  }
+}
+
+function createProjectCards(data) {
+  for (var i = 0; i < data.length; i++) {
+    var card = document.createElement("div");
+    card.id = data[i].Title + "-card";
+
+    imageSource =  data[i].Photo_Source;
+    card.style.backgroundImage= 'url(' + imageSource + ')';
+    if (data[i].Photo_Orientation == "horizontal") {
+      card.className = "card horizontal";
+    } else {
+      card.className = "card vertical";
+    }
+    
+    var cardOverlay = document.createElement("div");
+    cardOverlay.className = "card-overlay";
+
+    var cardText = document.createElement("p");
+    cardText.innerHTML = data[i].Title;
+    cardText.className = "card-text";
+
+    cardOverlay.append(cardText);
+    card.append(cardOverlay)
+    document.getElementById("project-cards").append(card);
+    
+  }
+}
+
+$(document).ready(function(){
+  $(".cross").click(function(){
+    console.log(currSkills);
+    console.log(allSkills);
+  });
+});
