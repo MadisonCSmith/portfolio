@@ -60,7 +60,7 @@ function createSkillsFilters() {
 function createProjectCards() {
   for (var i = 0; i < data.length; i++) {
     var a = document.createElement("a"); 
-    a.href = "project.html"; 
+    a.href = data[i].File_URL.toLowerCase() + ".html"; 
     
     var card = document.createElement("div");
     card.id = data[i].Title + "-card";
@@ -72,7 +72,6 @@ function createProjectCards() {
     } else {
       card.className = "card vertical";
     }
-    // card.innerHTML = "<a href='project.html'></a>"
     
     var cardOverlay = document.createElement("div");
     cardOverlay.className = "card-overlay";
@@ -135,3 +134,9 @@ function rearrangeCards() {
     }
   }
 }
+
+$("#down-arrow").click(function() {
+  $('html,body').animate({
+      scrollTop: $("#project-section").offset().top},
+      'medium');
+});

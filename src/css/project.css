@@ -1,0 +1,51 @@
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 2% 0 1% 0;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#project-image {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    background-color: pink;
+}
+
+#project-image:hover {
+    opacity: 60%;
+}
+
+#content div {
+    padding: 20px;
+}
+
+#content p {
+    padding: 10px;
+}
+
+#content a {
+    padding: 10px;
+}
+
+#content #skills .skills-pill {
+    height: 25px;
+    line-height: 25px;
+    margin: 0% 1% 0% 1%;
+    background-color: #0C63E7;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    border-radius: 3%;
+    position: relative;
+    padding: 0% 1% 0% 1%;
+}
+

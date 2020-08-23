@@ -9,7 +9,8 @@ body {
     min-width: 100%;
     color: white;
     position: relative;
-    margin-bottom: 5%;
+    animation-name: landing-text-color;
+    animation-duration: 1.5s;
 }
 
 #intro {
@@ -17,10 +18,13 @@ body {
     margin: auto;
     position: relative;
     top: 20vh;
+    animation-name: landing-intro-position;
+    animation-duration: 2s;
+    
 }
 
 #greeting {
-    font-size: 36px;
+    font-size: 48px;
     padding: 3vh;
 }
 
@@ -43,6 +47,10 @@ body {
     position: absolute;
     top: 10vh;
     left: 5vw;
+    animation-name: big-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
 }
 
 #second-square {
@@ -51,6 +59,10 @@ body {
     position: absolute;
     bottom: 15vh;
     right: 5vw;
+    animation-name: big-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
 }
 
 #third-square {
@@ -59,6 +71,10 @@ body {
     position: absolute;
     bottom: 10vh;
     right: 15vw;
+    animation-name: small-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
 }
 
 #fourth-square {
@@ -67,11 +83,10 @@ body {
     position: absolute;
     top: 5vh;
     left: 15vw;
-}
-
-.social-media-icon {
-    width: 30px;
-    height: 30px;
+    animation-name: small-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
 }
 
 footer {
@@ -84,18 +99,38 @@ footer {
 #down-arrow {
     width: 100px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25vh;
+    margin: 25vh auto 10vh auto;
+    animation-name: down-arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+#down-arrow:hover {
+    filter: brightness(80%)
 }
 
 #social-media-icons {
     text-align: center;
+    height: 50px;
+    animation-name: landing-icons-color;
+    animation-duration: 2s;
 }
 
 .social-media-icon {
     margin-left: 5vw;
     margin-right: 5vw;
+    width: 30px;
+    height: 30px;
+}
+
+.social-media-icon:hover {
+    filter: brightness(80%)
+}
+
+#project-section {
+    padding-top: 5%;
 }
 
 .skills-pill {
@@ -145,6 +180,7 @@ footer {
     background-size: 100% auto;
     background-repeat: no-repeat; 
     color: #ffffff00;
+    transition: width 600ms ease-out, height 600ms ease-out;
 }
 
 .card.vertical {
@@ -155,7 +191,7 @@ footer {
     height: 200px;
 }
 
-.card {
+a { 
     width: 30%;
     height: 250px;
     margin: 10px;
@@ -197,6 +233,48 @@ footer {
     margin-right: auto;
     margin-bottom: 5%;
 }
+
+/* animations */
+@keyframes down-arrow {
+    from {margin-top: 25vh; margin-bottom:10vh}
+    to {margin-top: 27vh; margin-bottom:8vh}
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@keyframes big-squares {
+    from {width: 150px; height: 150px;}
+    to {width: 153px; height: 153px;}
+}
+
+@keyframes small-squares {
+    from {width: 100px; height: 100px;}
+    to {width: 103px; height: 103px;}
+}
+
+@keyframes landing-text-color {
+    from {color: #00000000;}
+    to {color: white;}
+}
+
+@keyframes landing-icons-color {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes landing-greeting-position {
+    from {top: 25vh;}
+    to {top: 20vh;}
+}
+
+@keyframes landing-intro-position {
+    from {top: 25vh;}
+    to {top: 20vh;}
+}
+
+/* media queries */
 
 @media screen and (max-width: 600px) {
     
