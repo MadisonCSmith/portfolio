@@ -47,10 +47,9 @@ function createSkillsFilters() {
     pill.append(image)
     pill.className = "skills-pill";
     pill.id = currSkills[i];
-    document.getElementById("skills-filter").prepend(pill);
+    document.getElementById("skills-filter").append(pill);
   }
 
-  // <div className="skills-pill" id="show-all">SHOW ALL</div>
   var showAll = document.createElement("div");
   showAll.innerHTML = "SHOW ALL";
   showAll.id = "show-all";
@@ -60,6 +59,9 @@ function createSkillsFilters() {
 
 function createProjectCards() {
   for (var i = 0; i < data.length; i++) {
+    var a = document.createElement("a"); 
+    a.href = "project.html"; 
+    
     var card = document.createElement("div");
     card.id = data[i].Title + "-card";
 
@@ -70,6 +72,7 @@ function createProjectCards() {
     } else {
       card.className = "card vertical";
     }
+    // card.innerHTML = "<a href='project.html'></a>"
     
     var cardOverlay = document.createElement("div");
     cardOverlay.className = "card-overlay";
@@ -80,7 +83,8 @@ function createProjectCards() {
 
     cardOverlay.append(cardText);
     card.append(cardOverlay)
-    document.getElementById("project-cards").append(card);
+    a.append(card)
+    document.getElementById("project-cards").append(a);
     
   }
 }
