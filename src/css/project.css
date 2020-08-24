@@ -13,13 +13,6 @@ a:hover {
     text-decoration: none;
 }
 
-#project-image {
-    width: 90%;
-    height: 500px;
-    margin: 20px auto;
-    background-color: pink;
-}
-
 #project-image:hover {
     opacity: 60%;
 }
@@ -47,5 +40,18 @@ a:hover {
     border-radius: 3%;
     position: relative;
     padding: 0% 1% 0% 1%;
+}
+
+#project-image img {
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    border: lightgray 1px solid;
+}
+
+body {
+    padding-bottom: 5%;
 }
 

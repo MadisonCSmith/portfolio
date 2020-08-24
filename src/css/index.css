@@ -135,8 +135,7 @@ footer {
 
 .skills-pill {
     height: 25px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: 0 1% 1% 1%;
     background-color: #0C63E7;
     color: white;
     text-align: center;

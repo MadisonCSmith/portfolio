@@ -65,7 +65,7 @@ function createProjectCards() {
     var card = document.createElement("div");
     card.id = data[i].Title + "-card";
 
-    imageSource =  data[i].Photo_Source;
+    imageSource =  "../src/imgs/" + data[i].Photo_Source;
     card.style.backgroundImage= 'url(' + imageSource + ')';
     if (data[i].Photo_Orientation == "horizontal") {
       card.className = "card horizontal";
