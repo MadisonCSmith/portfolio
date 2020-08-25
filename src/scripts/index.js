@@ -83,7 +83,7 @@ function createProjectCards() {
     cardOverlay.append(cardText);
     card.append(cardOverlay)
     a.append(card)
-    document.getElementById("project-cards").append(a);
+    document.getElementById("project-cards").prepend(a);
     
   }
 }

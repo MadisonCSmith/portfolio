@@ -180,7 +180,6 @@ footer {
     background-size: 100% auto;
     background-repeat: no-repeat; 
     color: #ffffff00;
-    transition: width 600ms ease-out, height 600ms ease-out;
 }
 
 .card.vertical {
@@ -203,12 +202,11 @@ a {
 }
 
 .card-overlay:hover {
-    background-image: linear-gradient(transparent, white);
+    background-color: white;
     opacity: 50%;
 }
 
 .card:hover {
-    opacity: 80%;
     color: black;
 }
 
