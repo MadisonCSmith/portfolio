@@ -13,3 +13,6 @@ To Do:
  - figure out js file
  - why scrolling sideways?
  - cards expand on scroll
+ - why loads partly scrolled down
+ - fix landing text
+ - fix project text
