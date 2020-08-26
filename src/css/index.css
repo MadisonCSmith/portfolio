@@ -5,8 +5,13 @@ body {
 
 #landing {
     background-color: #0C63E7;
-    min-height: 100vh;
-    min-width: 100%;
+    /* height: 100vh;
+    width: 100vw; */
+    width:100%; /* fixes overflow */
+    height: 100%;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    box-sizing: border-box;
     color: white;
     position: relative;
     animation-name: landing-text-color;
@@ -19,8 +24,7 @@ body {
     position: relative;
     top: 20vh;
     animation-name: landing-intro-position;
-    animation-duration: 2s;
-    
+    animation-duration: 2s;   
 }
 
 #greeting {
@@ -39,6 +43,8 @@ body {
     background-color: #07C8F9;
     opacity: 40%;
     position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 #first-square {
@@ -93,7 +99,7 @@ footer {
     font-size: 12px;
     position: relative;
     margin-top: 5%;
-    left: 5%;
+    left: 2%;
 }
 
 #down-arrow {
@@ -160,6 +166,7 @@ footer {
 
 .skills-pill:hover .cross {
     display: inline;
+    margin-left: 0px 2px 0px 2px;
 }
 
 .skills-pill .cross {
@@ -190,7 +197,7 @@ footer {
 }
 
 
-a { 
+#project-cards a { 
     width: 30%;
     height: 250px;
     margin-left: 10px;
@@ -280,19 +287,7 @@ html {
       width: 100%;
     }
 
-    #first-square {
-        display: none;
-    }
-
-    #second-square {
-        display: none;
-    }
-
-    #third-square {
-        display: none;
-    }
-
-    #fourth-square {
+    .square {
         display: none;
     }
 

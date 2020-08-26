@@ -18,7 +18,7 @@ a:hover {
 }
 
 #content div {
-    padding: 20px;
+    padding: 15px 20px 15px 20px;
 }
 
 #content p {
@@ -27,6 +27,8 @@ a:hover {
 
 #content a {
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content #skills .skills-pill {
@@ -43,15 +45,35 @@ a:hover {
 }
 
 #project-image img {
-    position: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
     text-align: center;
     border: lightgray 1px solid;
 }
 
+.hortizontal {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical {
+    width: 100%;
+}
+
 body {
     padding-bottom: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .hortizontal {
+        width: 100%;
+    }
+    
+    .vertical {
+        width: 100%;
+    }
+
+    #content div {
+        padding: 5px 0px 5px 0px;
+    }
 }
 

@@ -33,6 +33,7 @@ function processData(data) {
   createProjectCards(data);
 }
 
+
 function createSkillsFilters() {
   $("#skills-filter").empty();
   currSkills = allSkills.concat([]);
@@ -59,27 +60,35 @@ function createSkillsFilters() {
 
 function createProjectCards() {
   for (var i = 0; i < data.length; i++) {
+    /* create link to go around card */
     var a = document.createElement("a"); 
     a.href = data[i].File_URL.toLowerCase() + ".html"; 
+    a.id = data[i].Title + "-card";
     
+    /* create card */
     var card = document.createElement("div");
-    card.id = data[i].Title + "-card";
 
+    /* create image to go in card */
     imageSource =  "../src/imgs/" + data[i].Photo_Source;
     card.style.backgroundImage= 'url(' + imageSource + ')';
+
+    /* assign classes to card */
     if (data[i].Photo_Orientation == "horizontal") {
       card.className = "card horizontal";
     } else {
       card.className = "card vertical";
     }
     
+    /* create div to go over card and tint with color */
     var cardOverlay = document.createElement("div");
     cardOverlay.className = "card-overlay";
 
+    /* add text to go over card */
     var cardText = document.createElement("p");
     cardText.innerHTML = data[i].Title;
     cardText.className = "card-text";
 
+    /* attach to each other and DOM */
     cardOverlay.append(cardText);
     card.append(cardOverlay)
     a.append(card)
@@ -111,7 +120,7 @@ $(document).ready(function(){
   });
 });
 
-$("body").on("click", function(){
+$(".skills-pill").on("click", function(){
   console.log("The paragraph was clicked.");
 });
 
@@ -123,7 +132,6 @@ $(document).ready(function(){
     rearrangeCards();
   });
 });
-
 
 function rearrangeCards() {
   // if currSkills doesn't contain any skill listed in data, take off
