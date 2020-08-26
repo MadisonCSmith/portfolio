@@ -132,6 +132,12 @@ footer {
 
 #project-section {
     padding-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#skills-filter {
+    margin: auto;
 }
 
 .skills-pill {
@@ -177,23 +183,18 @@ footer {
 }
 
 .card {
-    background-size: 100% auto;
     background-repeat: no-repeat; 
     color: #ffffff00;
+    background-size: cover;
+    height: 90%;
 }
 
-.card.vertical {
-    height: 200px;
-}
-
-.card.horizontal {
-    height: 200px;
-}
 
 a { 
     width: 30%;
     height: 250px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .card-overlay {
@@ -274,12 +275,30 @@ html {
 
 /* media queries */
 
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+@media screen and (max-width: 768px) {
+    a {
+      width: 100%;
+    }
+
+    #first-square {
+        display: none;
+    }
+
+    #second-square {
+        display: none;
+    }
+
+    #third-square {
+        display: none;
+    }
+
+    #fourth-square {
+        display: none;
+    }
+
+    #project-section {
+        margin-left: 0%;
+        margin-right: 0%;
     }
 }
 
-@media screen and (max-width: 5000px) {
-    
-}
