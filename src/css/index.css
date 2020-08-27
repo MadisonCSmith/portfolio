@@ -5,26 +5,25 @@ body {
 
 #landing {
     background-color: #0C63E7;
-    /* height: 100vh;
-    width: 100vw; */
-    width:100%; /* fixes overflow */
-    height: 100%;
+    width:100%; 
+    height: 100vh;
     padding: 0px 0px;
     margin: 0px 0px;
     box-sizing: border-box;
     color: white;
     position: relative;
+    text-align: center;
     animation-name: landing-text-color;
     animation-duration: 1.5s;
 }
 
 #intro {
-    width: 60%;
-    margin: auto;
+    width: 750px;
     position: relative;
-    top: 20vh;
-    animation-name: landing-intro-position;
-    animation-duration: 2s;   
+    margin: 0 auto;
+    top: 15vh;
+    animation-name: landing-intro-large-position;
+    animation-duration: 3s;   
 }
 
 #greeting {
@@ -102,16 +101,23 @@ footer {
     left: 2%;
 }
 
-#down-arrow {
-    width: 100px;
-    display: block;
-    margin: 25vh auto 10vh auto;
-    animation-name: down-arrow;
+#arrow-container {
+    position: absolute;
+    left: 50%;
+    bottom: 15px; 
+    animation-name: down-arrow-movement;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease;
-    animation-delay: 2s;
+    animation-delay: 2s; 
+}
+
+#down-arrow {
+    width: 100px;
+    margin: 0px auto 0px auto;
+    position: relative; 
+    left: -50%;
 }
 
 #down-arrow:hover {
@@ -144,6 +150,7 @@ footer {
 
 #skills-filter {
     margin: auto;
+    width: 90%;
 }
 
 .skills-pill {
@@ -155,13 +162,15 @@ footer {
     font-weight: 200;
     border-radius: 3%;
     position: relative;
-    padding: 0% 3% 0% 3%;
+    padding: 0% 2% 0% 2%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
 }
 
 .skills-pill:hover {
     background-color: #07C8F9;
     color: black;
+    padding: 0% 3% 0% 1%;
 }
 
 .skills-pill:hover .cross {
@@ -174,7 +183,9 @@ footer {
 }
 
 #show-all {
-    padding: 0% 2% 0% 2%;
+    height: 25px;
+    padding: 0% 1% 0% 1%;
+    border-radius: 3%;
 }
 
 #show-all:hover {
@@ -206,12 +217,12 @@ footer {
 
 .card-overlay {
     width: 100%;
-    height: 100%;
+    height: 105%;
 }
 
 .card-overlay:hover {
     background-color: white;
-    opacity: 50%;
+    opacity: 60%;
 }
 
 .card:hover {
@@ -219,11 +230,15 @@ footer {
 }
 
 .card-text {
-    opacity: 100%;
     position: absolute;
     bottom: 5px;
     left: 10px;
     font-size: 18px;
+}
+
+.card-text:hover {
+    color: black;
+    opacity: 100%;
 }
 
 #project-cards {
@@ -241,9 +256,9 @@ footer {
 }
 
 /* animations */
-@keyframes down-arrow {
-    from {margin-top: 25vh; margin-bottom:10vh}
-    to {margin-top: 27vh; margin-bottom:8vh}
+@keyframes down-arrow-movement {
+    from {bottom: 15px}
+    to {bottom: 10px}
 }
 
 html {
@@ -270,21 +285,26 @@ html {
     to {opacity: 1;}
 }
 
-@keyframes landing-greeting-position {
-    from {top: 25vh;}
-    to {top: 20vh;}
+@keyframes landing-intro-large-position {
+    from {top: 20vh;}
+    to {top: 15vh;}
 }
 
-@keyframes landing-intro-position {
-    from {top: 25vh;}
-    to {top: 20vh;}
+@keyframes landing-intro-small-position {
+    from {top: 10vh;}
+    to {top: 5vh;}
 }
 
 /* media queries */
 
 @media screen and (max-width: 768px) {
-    a {
+    #project-cards a {
       width: 100%;
+      margin: 0px 0px 5px 0px;
+    }
+
+    #project-cards {
+        width: 100%;
     }
 
     .square {
@@ -294,6 +314,32 @@ html {
     #project-section {
         margin-left: 0%;
         margin-right: 0%;
+    }
+
+    #intro {
+        width: 90%;
+        margin: auto;
+        top: 5vh;
+        animation-name: landing-intro-small-position;
+    }
+
+    #greeting {
+        font-size: 36px;
+    }
+
+    #description {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+
+    #greeting {
+        font-size: 30px;
+    }
+
+    #description {
+        font-size: 18px;
     }
 }
 
