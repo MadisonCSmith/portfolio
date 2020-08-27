@@ -50,8 +50,10 @@ a:hover {
 }
 
 .vertical #project-image {
-    width: 40%;
-    margin: 0px;
+    width: 50%;
+    padding: 0px 25px;
+    margin: 0px auto;
+    float: left;
 } 
 
 #project-image .horizontal {
@@ -70,8 +72,9 @@ a:hover {
 }
 
 .vertical #content {
-    width: 40%;
-    margin: 0px;
+    float: right;
+    width: 50%;
+    margin: 0 auto;
     padding: 0px;
 }
 
@@ -96,9 +99,10 @@ a:hover {
         width: 100%;
     }
 
-    .vertical #project-image img{
+    .vertical #project-image {
+        float: none;
         height: auto;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
 

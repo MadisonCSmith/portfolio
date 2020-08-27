@@ -1,6 +1,5 @@
 To Do:
  - write readme
- - fix mobile stuff
  - compress your images and scripts 
  - https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Frumpuspr.com%2F -- test page speed - make sure to optimize
  - separate out data processing and normal js stuff
@@ -11,8 +10,4 @@ To Do:
  - make projects moasicy with different sizes (2:3 and 3:2)
  - try in all browsers
  - figure out js file
- - why scrolling sideways?
- - cards expand on scroll
- - why loads partly scrolled down
- - fix landing text
  - fix project text

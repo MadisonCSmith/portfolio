@@ -15,6 +15,7 @@ var allSkills = []
 var currSkills = [];
 
 function processData(data) {
+  
   // gets all the skills from all the project entries
   for (var i = 0; i < data.length; i++) {
     currSkills = data[i].Skills.split(", ");
@@ -39,48 +40,56 @@ function processData(data) {
 function createSkillsFilters() {
   $("#skills-filter").empty();
   currSkills = allSkills.concat([]);
+
   for (var i = 0; i < currSkills.length; i++) {
 
+    // create filter pill
     var pill = document.createElement("div");
     pill.innerHTML= currSkills[i].toUpperCase().replace("-", " ");
+    pill.className = "skills-pill";
+    var idValue = currSkills[i].replace(" ", "-");
+    pill.setAttribute('onClick', "filterCards('" + idValue + "')");
+    pill.id = idValue;
+
+    // create image to put in filter
     var image = document.createElement("img")
     image.src = "../src/imgs/cross.png";
     image.className = "cross";
     image.id = currSkills[i] + "-cross"
+    
+    // put image and pill together
     pill.append(image)
-    pill.className = "skills-pill";
-    pill.id = currSkills[i].replace(" ", "-");
     document.getElementById("skills-filter").append(pill);
   }
 
+  // create "show all" button
   var showAll = document.createElement("div");
   showAll.innerHTML = "SHOW ALL";
   showAll.id = "show-all";
   showAll.className = "skills-all";
+  showAll.setAttribute('onClick', "showAll()");
   document.getElementById("skills-filter").append(showAll);
 }
 
 function createProjectCards() {
-  $("#project-cards").empty();
   for (var i = 0; i < data.length; i++) {
+
     /* create link to go around card */
     var a = document.createElement("a"); 
     a.href = data[i].File_URL.toLowerCase() + ".html"; 
-    a.id = data[i].Title + "-card";
+    a.id = data[i].Title.replace(/ /g, "-") + "-card";
     
     /* create card */
     var card = document.createElement("div");
-
-    /* create image to go in card */
-    imageSource =  "../src/imgs/" + data[i].Photo_Source;
-    card.style.backgroundImage= 'url(' + imageSource + ')';
-
-    /* assign classes to card */
     if (data[i].Photo_Orientation == "horizontal") {
       card.className = "card horizontal";
     } else {
       card.className = "card vertical";
     }
+
+    /* create image to go in card */
+    imageSource =  "../src/imgs/" + data[i].Photo_Source;
+    card.style.backgroundImage= 'url(' + imageSource + ')';
     
     /* create div to go over card and tint with color */
     var cardOverlay = document.createElement("div");
@@ -100,53 +109,32 @@ function createProjectCards() {
   }
 }
 
-/* remove skill filter pill when clicked */
-$(document).ready(function(){
-  $(".skills-pill").on("click", function(){
-    console.log("working");
-    var skill;
-    if (event.target.id.includes("-cross")) {
-      skill = event.target.parentElement.id.replace(" ", "-");
-    } else {
-      skill = event.target.id.replace(" ", "-");
-    }
-    console.log(skill);
-    index = currSkills.indexOf(skill);
-    currSkills = currSkills.splice(0, index).concat(currSkills.splice(index + 1, currSkills.length - 1));
-    
-    console.log(" ");
-    console.log("deleted skill: " + skill);
-    console.log("curr skills: " + currSkills);
+/* removes pill and cards with id of parameter */
+function filterCards(id) {
+  index = currSkills.indexOf(id);
+  currSkills.splice(index, 1);
 
-    $("#" + skill).hide();
-    rearrangeCards();
-  });
-});
-
-/* delete later */
-$(".skills-pill").on("click", function(){
-  console.log("The paragraph was clicked.");
-});
-
-/* add all skills filters when "show all" div is clicked */
-$(document).ready(function(){
-  $("#show-all").on("click", function(){
-    createSkillsFilters();
-    createProjectCards();
-    rearrangeCards();
-  });
-});
-
-function rearrangeCards() {
+  $("#" + id).hide();
+  
   // if currSkills doesn't contain any skill listed in data, take off
   for (var i = 0; i < data.length; i++) {
     if (currSkills.filter(value => data[i].Skills.includes(value)).length == 0) {
-      $("#" + data[i].Title.replace() + "-card").remove();
-      console.log("test");
+      $("#" + data[i].Title.replace(/ /g, "-") + "-card").hide();
+      console.log("#" + data[i].Title.replace(/ /g, "-") + "-card");
+      console.log(id)
     }
   }
 }
 
+/* add all skills filters when "show all" div is clicked */
+function showAll() {
+  console.log("testttt");
+  $("#project-cards").empty();
+  createSkillsFilters();
+  createProjectCards();
+}
+
+/* scrolls down when arrow clicked */
 $("#down-arrow").click(function() {
   $('html,body').animate({
       scrollTop: $("#project-section").offset().top},
