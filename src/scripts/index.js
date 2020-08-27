@@ -15,7 +15,7 @@ var allSkills = []
 var currSkills = [];
 
 function processData(data) {
-  
+
   // gets all the skills from all the project entries
   for (var i = 0; i < data.length; i++) {
     currSkills = data[i].Skills.split(", ");
@@ -120,15 +120,12 @@ function filterCards(id) {
   for (var i = 0; i < data.length; i++) {
     if (currSkills.filter(value => data[i].Skills.includes(value)).length == 0) {
       $("#" + data[i].Title.replace(/ /g, "-") + "-card").hide();
-      console.log("#" + data[i].Title.replace(/ /g, "-") + "-card");
-      console.log(id)
     }
   }
 }
 
 /* add all skills filters when "show all" div is clicked */
 function showAll() {
-  console.log("testttt");
   $("#project-cards").empty();
   createSkillsFilters();
   createProjectCards();
@@ -139,4 +136,26 @@ $("#down-arrow").click(function() {
   $('html,body').animate({
       scrollTop: $("#project-section").offset().top},
       'medium');
+});
+
+function scrollRates() {
+  var square = document.getElementById("first-square");
+  var yPos = 0 - window.pageYOffset/30;  
+  square.style.top = 10 + yPos + "vh"; 
+
+  var square = document.getElementById("second-square");
+  var yPos = 0 - window.pageYOffset/30;  
+  square.style.bottom = 15 - yPos + "vh"; 
+
+  var square = document.getElementById("third-square");
+  var yPos = 0 - window.pageYOffset/30;  
+  square.style.bottom = 10 - yPos + "vh"; 
+
+  var square = document.getElementById("fourth-square");
+  var yPos = 0 - window.pageYOffset/30;  
+  square.style.top = 5 + yPos + "vh"; 
+}
+
+window.addEventListener("scroll", function(){
+  scrollRates(); 
 });
