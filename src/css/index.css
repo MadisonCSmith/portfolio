@@ -267,12 +267,12 @@ html {
 
 @keyframes big-squares {
     from {width: 150px; height: 150px;}
-    to {width: 153px; height: 153px;}
+    to {width: 155px; height: 155px;}
 }
 
 @keyframes small-squares {
     from {width: 100px; height: 100px;}
-    to {width: 103px; height: 103px;}
+    to {width: 105px; height: 105px;}
 }
 
 @keyframes landing-text-color {

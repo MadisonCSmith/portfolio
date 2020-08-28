@@ -138,21 +138,22 @@ $("#down-arrow").click(function() {
       'medium');
 });
 
+/* applies different scrolling rates to squares */
 function scrollRates() {
   var square = document.getElementById("first-square");
-  var yPos = 0 - window.pageYOffset/30;  
+  var yPos = 0 - window.pageYOffset/25;  
   square.style.top = 10 + yPos + "vh"; 
 
   var square = document.getElementById("second-square");
-  var yPos = 0 - window.pageYOffset/30;  
+  var yPos = 0 - window.pageYOffset/25;  
   square.style.bottom = 15 - yPos + "vh"; 
 
   var square = document.getElementById("third-square");
-  var yPos = 0 - window.pageYOffset/30;  
+  var yPos = 0 - window.pageYOffset/25;  
   square.style.bottom = 10 - yPos + "vh"; 
 
   var square = document.getElementById("fourth-square");
-  var yPos = 0 - window.pageYOffset/30;  
+  var yPos = 0 - window.pageYOffset/25;  
   square.style.top = 5 + yPos + "vh"; 
 }
 
