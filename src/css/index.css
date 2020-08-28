@@ -205,6 +205,7 @@ footer {
     color: #ffffff00;
     background-size: cover;
     height: 90%;
+    border: none;
 }
 
 
@@ -217,7 +218,8 @@ footer {
 
 .card-overlay {
     width: 100%;
-    height: 105%;
+    height: 100%;
+    margin: 0px 0px;
 }
 
 .card-overlay:hover {

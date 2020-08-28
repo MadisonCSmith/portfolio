@@ -141,19 +141,19 @@ $("#down-arrow").click(function() {
 /* applies different scrolling rates to squares */
 function scrollRates() {
   var square = document.getElementById("first-square");
-  var yPos = 0 - window.pageYOffset/25;  
+  var yPos = 0 - window.pageYOffset/15;  
   square.style.top = 10 + yPos + "vh"; 
 
   var square = document.getElementById("second-square");
-  var yPos = 0 - window.pageYOffset/25;  
+  var yPos = 0 - window.pageYOffset/10;  
   square.style.bottom = 15 - yPos + "vh"; 
 
   var square = document.getElementById("third-square");
-  var yPos = 0 - window.pageYOffset/25;  
+  var yPos = 0 - window.pageYOffset/15;  
   square.style.bottom = 10 - yPos + "vh"; 
 
   var square = document.getElementById("fourth-square");
-  var yPos = 0 - window.pageYOffset/25;  
+  var yPos = 0 - window.pageYOffset/10;  
   square.style.top = 5 + yPos + "vh"; 
 }
 
