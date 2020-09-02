@@ -1,7 +1,8 @@
 ﻿Title,Photo_Source,Photo_Orientation,Skills,File_URL
-Olympic Medals Dashboard,OlympicMedals.png,vertical,"Tableau, data viz, design",OlympicMedals
-Superstore Product Analysis Dashboard,SuperstoreProduct.png,horizontal,skill1,SuperstoreProduct
-Fremont Bridge Usage Dashboard,FremontBridge.png,horizontal,skill2,FremontBridge
-NYC Airbnb Rentals Dashboard,NYCAirbnb.png,horizontal,skill3,NYCAirbnb
-Does it Rain More in Seattle,RainSeattle.png,horizontal,skill5,RainSeattle
-FAA Wildlife Strikes Dashboard,WildLifeStrikes.png,vertical,skill6,WildlifeStrikes
+Olympic Medals Dashboard,OlympicMedals.png,vertical,"Tableau, data visualization, design, data analysis",OlympicMedals
+Superstore Product Analysis Dashboard,SuperstoreProduct.png,horizontal,"Tableau, data visualization, design, data analysis",SuperstoreProduct
+Fremont Bridge Usage Dashboard,FremontBridge.png,horizontal,"Tableau, data visualization, design, data analysis",FremontBridge
+NYC Airbnb Rentals Dashboard,NYCAirbnb.png,horizontal,"Tableau, data visualization, design, data analysis",NYCAirbnb
+Does it Rain More in Seattle,RainSeattle.png,horizontal,"Tableau, data visualization, design, data analysis",RainSeattle
+FAA Wildlife Strikes Dashboard,WildLifeStrikes.png,vertical,"Tableau, data visualization, design, data analysis",WildlifeStrikes
+Superstore Profit Analysis,SuperstoreProfit.png,horizontal,"Tableau, data visualization, design, data analysis",SuperstoreProfit
