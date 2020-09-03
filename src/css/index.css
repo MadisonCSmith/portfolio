@@ -104,13 +104,7 @@ footer {
 #arrow-container {
     position: absolute;
     left: 50%;
-    bottom: 15px; 
-    animation-name: down-arrow-movement;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease;
-    animation-delay: 2s; 
+    bottom: 15px;  
 }
 
 #down-arrow {
@@ -258,10 +252,6 @@ footer {
 }
 
 /* animations */
-@keyframes down-arrow-movement {
-    from {bottom: 15px}
-    to {bottom: 10px}
-}
 
 html {
     scroll-behavior: smooth;
