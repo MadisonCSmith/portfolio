@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Madison Smith</title>
+        <meta name="author" content="Madison Smith">
+        <meta name="description" content="Madison Smith's Portfolio">
+        <meta name="keywords" content="portfolio, data, recent graduate, UW, University of Washington">
+        <link rel="icon" type="image/png" href="../src/imgs/favicon.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../src/css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+        <!-- gets media queries to work -->
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+        <div id="landing">
+            <div id="intro">
+                <div id="greeting">
+                    Hi, I'm Madison Smith
+                </div>
+                <div id="description">
+                    I am a recent graduate from the University of Washington in Seattle
+                    where I graduated with interdisciplinary honors and degrees in <b>informatics</b>, with a concentration in <b>data science,</b> and <b>philosophy</b>. 
+                    I have a broad technical background and I am interested <b>data visualization</b> and <b>data analytics</b>.
+                </div>
+                <div id="social-media-icons">
+                    <a href="https://www.linkedin.com/in/madison-c-smith" target="_blank"><img class="social-media-icon" src="../src/imgs/linkedin.png" alt="linkedin icon"></a>
+                    <a href="https://github.com/MadisonCSmith" target="_blank"><img class="social-media-icon" src="../src/imgs/github.png" alt="github icon"></a>
+                    <a href="https://www.hackerrank.com/madisoncsmith" target="_blank"><img class="social-media-icon" src="../src/imgs/hackerrank.png" alt="hackerrank icon"></a>
+                </div>
+            </div>
+            <div id="arrow-container">
+                <img id="down-arrow" src="../src/imgs/down-arrow.png" alt="down arrow">
+            </div>
+        </div>
+            <div id="first-square" class="square"></div>
+            <div id="second-square" class="square"></div>
+            <div id="third-square" class="square"></div>
+            <div id="fourth-square" class="square"></div>
+        <div id="project-section">
+            <div id="skills-filter" class="row">
+            </div>
+            <div id="project-cards" class="row">
+            </div>
+        </div>
+        <footer class="container">
+            Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, 
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>,
+            <a href="https://www.iconfinder.com/Flatart"  title="Flatart">Flatart</a> from <a href="https://www.iconfinder.com/" title="IconFinder">www.iconfinder.com</a> and 
+            <a href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.
+        </footer>
+
+        <!-- bootstrap scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- PapaParse - for parsing csv files -->
+        <script src="../PapaParse-5.0.2/papaparse.js"></script>
+
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- app scripts (don't need this because browserify reads in index.js and deals with it-->
+        <script src="../src/scripts/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,337 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    height: auto;
+}
+
+#landing {
+    background-color: #0C63E7;
+    width:100%; 
+    height: 100vh;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+    text-align: center;
+    animation-name: landing-text-color;
+    animation-duration: 1.5s;
+}
+
+#intro {
+    width: 750px;
+    position: relative;
+    margin: 0 auto;
+    top: 15vh;
+    animation-name: landing-intro-large-position;
+    animation-duration: 3s;   
+}
+
+#greeting {
+    font-size: 48px;
+    padding: 3vh;
+}
+
+#description {
+    font-size: 28px;
+    font-weight: 200;
+    text-align: center;
+    padding: 3vh;
+}
+
+.square {
+    background-color: #07C8F9;
+    opacity: 40%;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#first-square {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    animation-name: big-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#second-square {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 15vh;
+    right: 5vw;
+    animation-name: big-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#third-square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 10vh;
+    right: 15vw;
+    animation-name: small-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#fourth-square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 5vh;
+    left: 15vw;
+    animation-name: small-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+footer {
+    font-size: 12px;
+    position: relative;
+    margin-top: 5%;
+    left: 2%;
+}
+
+#arrow-container {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;  
+}
+
+#down-arrow {
+    width: 100px;
+    margin: 0px auto 0px auto;
+    position: relative; 
+    left: -50%;
+}
+
+#down-arrow:hover {
+    filter: brightness(80%)
+}
+
+#social-media-icons {
+    text-align: center;
+    height: 50px;
+    animation-name: landing-icons-color;
+    animation-duration: 2s;
+}
+
+.social-media-icon {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 30px;
+    height: 30px;
+}
+
+.social-media-icon:hover {
+    filter: brightness(80%)
+}
+
+#project-section {
+    padding-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#skills-filter {
+    margin: auto;
+    width: 90%;
+}
+
+.skills-pill {
+    height: 25px;
+    margin: 0 1% 1% 1%;
+    background-color: #0C63E7;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    border-radius: 3%;
+    position: relative;
+    padding: 0% 2% 0% 2%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+}
+
+.skills-pill:hover {
+    background-color: #07C8F9;
+    color: black;
+    padding: 0% 3% 0% 1%;
+}
+
+.skills-pill:hover .cross {
+    display: inline;
+    margin-left: 0px 2px 0px 2px;
+}
+
+.skills-pill .cross {
+    display: none;
+}
+
+#show-all {
+    height: 25px;
+    padding: 0% 1% 0% 1%;
+    border-radius: 3%;
+}
+
+#show-all:hover {
+    background-color: lightgray;
+}
+
+.cross {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.card {
+    background-repeat: no-repeat; 
+    color: #ffffff00;
+    background-size: cover;
+    height: 90%;
+    border: none;
+}
+
+
+#project-cards a { 
+    width: 30%;
+    height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-overlay {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+}
+
+.card-overlay:hover {
+    background-color: white;
+    opacity: 60%;
+}
+
+.card:hover {
+    color: black;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 18px;
+}
+
+.card-text:hover {
+    color: black;
+    opacity: 100%;
+}
+
+#project-cards {
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#skills-filter {
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+/* animations */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@keyframes big-squares {
+    from {width: 150px; height: 150px;}
+    to {width: 155px; height: 155px;}
+}
+
+@keyframes small-squares {
+    from {width: 100px; height: 100px;}
+    to {width: 105px; height: 105px;}
+}
+
+@keyframes landing-text-color {
+    from {color: #00000000;}
+    to {color: white;}
+}
+
+@keyframes landing-icons-color {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes landing-intro-large-position {
+    from {top: 20vh;}
+    to {top: 15vh;}
+}
+
+@keyframes landing-intro-small-position {
+    from {top: 10vh;}
+    to {top: 5vh;}
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+    #project-cards a {
+      width: 100%;
+      margin: 0px 0px 5px 0px;
+    }
+
+    #project-cards {
+        width: 100%;
+    }
+
+    .square {
+        display: none;
+    }
+
+    #project-section {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    #intro {
+        width: 90%;
+        margin: auto;
+        top: 5vh;
+        animation-name: landing-intro-small-position;
+    }
+
+    #greeting {
+        font-size: 36px;
+    }
+
+    #description {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+
+    #greeting {
+        font-size: 30px;
+    }
+
+    #description {
+        font-size: 18px;
+    }
+}
+

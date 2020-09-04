@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Madison Smith</title>
+        <meta name="author" content="Madison Smith">
+        <meta name="description" content="Madison Smith's Portfolio">
+        <meta name="keywords" content="portfolio, data, recent graduate, UW, University of Washington">
+        <link rel="icon" type="image/png" href="../src/imgs/favicon.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../src/css/project.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+        <!-- gets media queries to work -->
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+        <a href="index.html"><h1>Madison Smith</h1></a>
+        <div id="project-image">
+            <a href="https://public.tableau.com/profile/madison.smith#!/vizhome/DoesitactuallyrainmoreinSeattle/dashboard2" target="_blank"> 
+                <img class="horizontal" src="../src/imgs/RainSeattle.png" alt="dashboard about customers using Tableau's superstore dataset" >
+            </a>
+        </div>
+        <div class="horizontal">
+            <div id="content">
+                <div id="skills" class="row">
+                    <div class="skills-pill">TABLEAU</div>
+                    <div class="skills-pill">DATA VIZ</div>
+                </div>
+                <div id="url">
+                    <b>URL</b>
+                    <br>
+                    <p>
+                        <a href="https://public.tableau.com/profile/madison.smith#!/vizhome/DoesitactuallyrainmoreinSeattle/dashboard2" target="_blank">Tableau dashboard</a>
+                    </p>
+                </div>
+                <div id="description">
+                    <b>Description</b>
+                    <br>
+                    <p>This was designed to be more of an infographic than a dashboard. I created this dashboard in reaction to 
+                        a misleading claim I read about that argued that Seattle’s reputation for rainy weather is a misnomer 
+                        because other cities get more inches of rain than Seattle. I thought it was important to illustrate that 
+                        when comparing rain between cities, it is prudent to consider a couple metrics. While the number of inches 
+                        is a valuable metric, the number of days is also important to consider. One hour of intense heavy rain may 
+                        get more inches of rain than a day of light drizzle, but I would not consider a city that gets an hour of 
+                        intense rain to be less rainy than a city that gets light rain all day.
+                    </p>
+                    <p>The data used in this dashboard was collected from <a href="https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00313" target="_blank">NOAA</a>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- bootstrap scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- PapaParse - for parsing csv files -->
+        <script src="../PapaParse-5.0.2/papaparse.js"></script>
+        
+    </body>
+</html>
