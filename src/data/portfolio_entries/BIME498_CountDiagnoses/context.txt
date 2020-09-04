@@ -1,1 +1,0 @@
-This was an assignment that I did for my Transformational Technologies for Biology, Medicine, and Health class. The task was to parsed the text in a couple hundred redacted medical records and identify and combine all the diagnoses in these medical records and create a table with the count of each diagnosis. 

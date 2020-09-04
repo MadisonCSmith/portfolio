@@ -1,1 +1,0 @@
-This is a final project that three other people and I completed for our intro to Technical Foundations of Informatics class. This assignment was to create a shiny app that could filter and illustrate different parts of our chosen dataset. We chose a dataset on global terrorist attacks from Kaggle and each created tab that filtered and represented the data differently.
