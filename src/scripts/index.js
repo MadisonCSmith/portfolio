@@ -1,6 +1,6 @@
 var data;
 
-Papa.parse('../src/data/project_data.csv', {
+Papa.parse('src/data/project_data.csv', {
   header: true,
   download: true,
   dynamicTyping: true,
@@ -53,7 +53,7 @@ function createSkillsFilters() {
 
     // create image to put in filter
     var image = document.createElement("img")
-    image.src = "../src/imgs/cross.png";
+    image.src = "src/imgs/cross.png";
     image.className = "cross";
     image.id = currSkills[i] + "-cross"
     
@@ -88,7 +88,7 @@ function createProjectCards() {
     }
 
     /* create image to go in card */
-    imageSource =  "../src/imgs/" + data[i].Photo_Source;
+    imageSource =  "src/imgs/" + data[i].Photo_Source;
     card.style.backgroundImage= 'url(' + imageSource + ')';
     
     /* create div to go over card and tint with color */
