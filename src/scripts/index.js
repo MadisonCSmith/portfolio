@@ -77,6 +77,7 @@ function createProjectCards() {
     /* create link to go around card */
     var a = document.createElement("a"); 
     a.href = "public/" + data[i].File_URL + ".html"; 
+    console.log("public/" + data[i].File_URL + ".html")
     a.id = data[i].Title.replace(/ /g, "-") + "-card";
     
     /* create card */

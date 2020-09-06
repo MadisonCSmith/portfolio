@@ -97,7 +97,7 @@ body {
 footer {
     font-size: 12px;
     position: relative;
-    margin-top: 5%;
+    margin: 5% 0% 1% 0%;
     left: 2%;
 }
 
@@ -321,6 +321,21 @@ html {
 
     #description {
         font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+
+    .skills-pill {
+        background-color: #07C8F9;
+        color: black;
+        padding: 0px 25px 0px 5px;
+    }
+
+    .skills-pill .cross {
+        display: inline;
+        margin-left: 0px 2px 0px 2px;
     }
 }
 
