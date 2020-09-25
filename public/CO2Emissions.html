@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Madison Smith</title>
+        <meta name="author" content="Madison Smith">
+        <meta name="description" content="Madison Smith's Portfolio">
+        <meta name="keywords" content="portfolio, data, recent graduate, UW, University of Washington">
+        <link rel="icon" type="image/png" href="../src/imgs/favicon.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../src/css/project.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+        <!-- gets media queries to work -->
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+        <a href="../index.html"><h1>Madison Smith</h1></a>
+        <div id="project-image">
+            <a href="https://madison-c-smith.shinyapps.io/a7-data-app-MadisonCSmith/" target="_blank"> 
+                <img class="horizontal" src="../src/imgs/CO2Emissions.png" alt="dashboard about CO2 Emissions around the world" >
+            </a>
+        </div>
+        <div class="horizontal">
+            <div id="content">
+                <div id="skills" class="row">
+                    <div class="skills-pill">R</div>
+                    <div class="skills-pill">DATA VISUALIZATION</div>
+                    <div class="skills-pill">DATA ANALYSIS</div>
+                </div>
+                <div id="url">
+                    <b>URL</b>
+                    <br>
+                    <p>
+                        <a href="https://madison-c-smith.shinyapps.io/a7-data-app-MadisonCSmith/" target="_blank">Project</a>
+                        (The app takes a minute to load)
+                    </p>
+                </div>
+                <div id="description">
+                    <b>Description</b>
+                    <br>
+                    <p>
+                        This project preps and visualizes data about carbon dioxide emissions from 2006 to 2014 by country. The table 
+                        and the map both make it easy to compare carbon dioxide emissions by country. I chose the color red to signify 
+                        higher levels of carbon dioxide emissions because CO2 Emissions is typically a negative thing and red has negative 
+                        connotations. The map makes it easier to visualize the data, however, the table makes it easier to compare countries 
+                        directly because the data is not binned.
+                    </p>
+                    <p>The project was originally created for a course called Technical Foundations that I took while at the 
+                        University of Washington. The project was written in R and Markdown and deployed using R Shiny. 
+                        The data used in this dashboard is from the <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.PC?end=2014&start=1960" target="_blank"> World Bank</a>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- bootstrap scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- PapaParse - for parsing csv files -->
+        <script src="../PapaParse-5.0.2/papaparse.js"></script>
+        
+    </body>
+</html>
