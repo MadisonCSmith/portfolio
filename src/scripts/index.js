@@ -1,5 +1,6 @@
 var data;
 
+// gets project data from csv file
 Papa.parse('src/data/project_data.csv', {
   header: true,
   download: true,
@@ -11,14 +12,18 @@ Papa.parse('src/data/project_data.csv', {
   }
 });
 
+// unique skills from all projects (not just filtered projects)
 var allSkills = []
+
+// current filtered skills
 var currSkills = [];
 
 function processData(data) {
 
   // gets all the skills from all the project entries
   for (var i = 0; i < data.length; i++) {
-    currSkills = data[i].Skills.split(", ");
+
+    currSkills = data[i].Skills.toUpperCase().split(", ");
     allSkills = allSkills.concat(currSkills);
   }
 
@@ -31,7 +36,8 @@ function processData(data) {
       allSkills[i] = allSkills[i].replace(" ", "-");
     }
   }
-  currSkills = allSkills.concat([]);
+  currSkills = []; //////////////////////////////////allSkills.concat([]);
+  console.log(allSkills);
   createSkillsFilters();
   createProjectCards(data);
 }
@@ -39,6 +45,9 @@ function processData(data) {
 
 function createSkillsFilters() {
   $("#skills-filter").empty();
+  // console.log(allSkills);
+  allSkills.sort();
+  // console.log(allSkills);
   currSkills = allSkills.concat([]);
 
   for (var i = 0; i < currSkills.length; i++) {
@@ -52,13 +61,13 @@ function createSkillsFilters() {
     pill.id = idValue;
 
     // create image to put in filter
-    var image = document.createElement("img")
-    image.src = "src/imgs/cross.png";
-    image.className = "cross";
-    image.id = currSkills[i] + "-cross"
+    // var image = document.createElement("img")
+    // image.src = "src/imgs/cross.png";
+    // image.className = "cross";
+    // image.id = currSkills[i] + "-cross"
     
     // put image and pill together
-    pill.append(image)
+    // pill.append(image)
     document.getElementById("skills-filter").append(pill);
   }
 
