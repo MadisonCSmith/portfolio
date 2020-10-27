@@ -6,5 +6,5 @@ I wanted to build a relatively quick project that allows me to showcase my proje
 
  # Status
 
-The portfolio currently contains a few finished projects but I plan to add additional projects after I complete the last few details.
+I am regularly adding new projects.
 
