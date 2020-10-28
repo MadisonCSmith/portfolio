@@ -348,11 +348,11 @@ html {
 @media screen and (max-width: 476px) {
 
     #greeting {
-        font-size: 30px;
+        font-size: 36px;
     }
 
     #description {
-        font-size: 18px;
+        font-size: 24px;
     }
 }
 
