@@ -37,7 +37,7 @@ function processData(data) {
     }
   }
   currSkills = []; //////////////////////////////////allSkills.concat([]);
-  console.log(allSkills);
+  // console.log(allSkills);
   createSkillsFilters();
   createProjectCards(data);
 }
@@ -48,15 +48,15 @@ function createSkillsFilters() {
   // console.log(allSkills);
   allSkills.sort();
   // console.log(allSkills);
-  currSkills = allSkills.concat([]);
+  //currSkills = allSkills.concat([]); ////////////////////////
 
-  for (var i = 0; i < currSkills.length; i++) {
+  for (var i = 0; i < allSkills.length; i++) {
 
     // create filter pill
     var pill = document.createElement("div");
-    pill.innerHTML= currSkills[i].toUpperCase().replace("-", " ");
+    pill.innerHTML= allSkills[i].toUpperCase().replace("-", " ");
     pill.className = "skills-pill";
-    var idValue = currSkills[i].replace(" ", "-");
+    var idValue = allSkills[i].replace(" ", "-");
     pill.setAttribute('onClick', "filterCards('" + idValue + "')");
     pill.id = idValue;
 
@@ -73,7 +73,7 @@ function createSkillsFilters() {
 
   // create "show all" button
   var showAll = document.createElement("div");
-  showAll.innerHTML = "SHOW ALL";
+  showAll.innerHTML = "CLEAR FILTER";
   showAll.id = "show-all";
   showAll.className = "skills-all";
   showAll.setAttribute('onClick', "showAll()");
@@ -86,7 +86,7 @@ function createProjectCards() {
     /* create link to go around card */
     var a = document.createElement("a"); 
     a.href = "public/" + data[i].File_URL + ".html"; 
-    console.log("public/" + data[i].File_URL + ".html")
+    // console.log("public/" + data[i].File_URL + ".html")
     a.id = data[i].Title.replace(/ /g, "-") + "-card";
     
     /* create card */
@@ -119,24 +119,52 @@ function createProjectCards() {
   }
 }
 
-/* removes pill and cards with id of parameter */
+// when filter is clicked, update filter and project cards
 function filterCards(id) {
-  index = currSkills.indexOf(id);
-  currSkills.splice(index, 1);
+  var skill = id.replace(/ /g, "-");
 
-  $("#" + id).hide();
-  
-  // if currSkills doesn't contain any skill listed in data, take off
-  for (var i = 0; i < data.length; i++) {
-    if (currSkills.filter(value => data[i].Skills.includes(value)).length == 0) {
-      $("#" + data[i].Title.replace(/ /g, "-") + "-card").hide();
+  // if skill in currSkills, remove it and change css to reflect change
+  if (currSkills.includes(skill)) {
+    currSkills.splice(currSkills.indexOf(skill), 1);
+    document.getElementById(id).classList.remove("selected");
+
+  // if skill not in currSkills, add it and change css to reflect change
+  } else {
+    currSkills.push(skill);
+    document.getElementById(skill).classList.add("selected");
+  }
+
+  // show all projects if currSkills is empty
+  if (currSkills.length == 0) {
+    for (var i = 0; i < data.length; i++) {
+      var card = document.getElementById(data[i].Title.replace(/ /g, "-") + "-card");
+      card.style.display = "inline";
     }
+
+  // display/hide project cards to match currSkills list 
+  } else {
+    for (var i = 0; i < data.length; i++) {
+      projectSkills = data[i].Skills.toUpperCase().replace(/, /g, "*****").replace(/ /g, "-").split("*****");
+
+      console.log(projectSkills);
+      var card = document.getElementById(data[i].Title.replace(/ /g, "-") + "-card");
+  
+      // if skills in project and currSkills don't share any common skills, hide card, otherwise show card
+      if (projectSkills.filter(function(skill) { return currSkills.includes(skill); }).length == 0) {
+        card.style.display = "none";
+      } else {
+        card.style.display = "inline";
+      }
+    }
+
   }
 }
+  
 
 /* add all skills filters when "show all" div is clicked */
 function showAll() {
   $("#project-cards").empty();
+  currSkills = [];
   createSkillsFilters();
   createProjectCards();
 }

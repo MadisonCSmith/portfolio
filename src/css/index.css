@@ -166,7 +166,7 @@ footer {
     background-color: #07C8F9;
 }
 
-.skills-pill .selected {
+.skills-pill.selected {
     background-color: #07C8F9;
 }
 
