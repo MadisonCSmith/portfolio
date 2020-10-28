@@ -151,7 +151,7 @@ footer {
     height: 40px;
     margin: 0 1% 1% 1%;
     background-color: transparent /*#0C63E7*/;
-    border: #07C8F9 solid 3px;
+    border: /*#07C8F9*/#3c82eb solid 3px;
     color: black;
     text-align: center;
     font-weight: 200;
@@ -163,11 +163,15 @@ footer {
 }
 
 .skills-pill:hover {
-    background-color: #07C8F9;
+    background-color: #0C63E7; /*#07C8F9;*/
+    border: #0C63E7 solid 3px;
+    color: white;
 }
 
 .skills-pill.selected {
-    background-color: #07C8F9;
+    background-color: #0C63E7; /*#07C8F9;*/
+    border: #0C63E7 solid 3px;
+    color: white;
 }
 
 /* .skills-pill:hover .cross {

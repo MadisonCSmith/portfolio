@@ -24,16 +24,17 @@ a:hover {
 }
 
 #content #skills .skills-pill {
-    height: 25px;
-    line-height: 25px;
-    margin: 2% 1% 2% 1%;
+    height: 40px;
+    margin: 2% 1% 1% 1%;
     background-color: #0C63E7;
+    border: /*#07C8F9*/#0C63E7 solid 3px;
     color: white;
     text-align: center;
     font-weight: 200;
-    border-radius: 3%;
+    border-radius: 5px;
     position: relative;
-    padding: 0% 1% 0% 1%;
+    padding: 5px 20px 10px 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 #project-image {
@@ -53,6 +54,15 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+}
+
+#project-image video {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 60%;
+    height: auto;
 }
 
 .vertical #project-image {
@@ -124,5 +134,10 @@ a:hover {
 
     #content p {
         font-size: 14px;
+    }
+
+    #project-image video {
+        width: 100%;
+        height: auto;
     }
 }
